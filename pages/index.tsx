@@ -3,19 +3,28 @@ import Layout, { siteTitle } from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
+import Date from '../components/date'
+import { GetStaticProps } from 'next'
 
-export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
+
+export const getStaticProps: GetStaticProps = async () => {
+  const allPostsData = getSortedPostsData()
   return {
     props: {
-      allPostsData,
-    },
-  };
+      allPostsData
+    }
+  }
 }
 
-export default function Home({ allPostsData }) {
+export default function Home({ allPostsData } :  {
+  allPostsData: {
+    date: string
+    title: string
+    id: string
+  }[]
+}) {
   return (
-    <Layout home>
+    <Layout home={true}>
       <Head>
         <title>{siteTitle}</title>
       </Head>
@@ -23,6 +32,7 @@ export default function Home({ allPostsData }) {
         <p><Link href={`/testes/cep`}>Teste Cep (Busca dados srw)</Link></p>
         <p><Link href={`/testes/cep/35604000`}>Teste Cep 35604-000 (Busca dados srw)</Link></p>
         <p><Link href={`/testes/users`}>Teste Users (Busca dados srw)</Link></p>
+        <p><Link href={`/api/hello`}>Api hello</Link></p>
       </section>
       <section className={utilStyles.headingMd}>
         <p>Opa! Bão o não? É eu memo!</p>
