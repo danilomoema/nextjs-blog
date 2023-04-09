@@ -31,7 +31,7 @@ export function getSortedPostsData() : Array<Post>  {
       id,
       ...(matterResult.data as Post)
     }
-  })
+  });
   // Sort posts by date
   return allPostsData.sort((a, b) => {
     if (a.date < b.date) {

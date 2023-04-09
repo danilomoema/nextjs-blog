@@ -32,7 +32,8 @@ export default function Home({ allPostsData } :  {
         <p><Link href={`/testes/cep`}>Teste Cep (Busca dados srw)</Link></p>
         <p><Link href={`/testes/cep/35604000`}>Teste Cep 35604-000 (Busca dados srw)</Link></p>
         <p><Link href={`/testes/users`}>Teste Users (Busca dados srw)</Link></p>
-        <p><Link href={`/api/hello`}>Api hello</Link></p>
+        <p><Link href={`/api/hello`}>Api hello curioso</Link></p>
+        <p><Link href={`/redirecionamento/sejaredicationado`}>Teste redirecionamento (href=/redirecionamento/sejaredicationado)</Link></p>        
       </section>
       <section className={utilStyles.headingMd}>
         <p>Opa! Bão o não? É eu memo!</p>
