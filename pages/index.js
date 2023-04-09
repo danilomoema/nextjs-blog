@@ -20,9 +20,9 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
       <section>
-        <p><p><Link href={`http://localhost:3000/testes/cep`}>Teste Cep (Busca dados srw)</Link></p>
-        <p><Link href={`http://localhost:3000/testes/cep/35604000`}>Teste Cep 35604-000 (Busca dados srw)</Link></p>
-        <p></p><Link href={`http://localhost:3000/testes/users`}>Teste Users (Busca dados srw)</Link></p>
+        <p><p><Link href={`/testes/cep`}>Teste Cep (Busca dados srw)</Link></p>
+        <p><Link href={`/testes/cep/35604000`}>Teste Cep 35604-000 (Busca dados srw)</Link></p>
+        <p></p><Link href={`/testes/users`}>Teste Users (Busca dados srw)</Link></p>
       </section>
       <section className={utilStyles.headingMd}>
         <p>Opa! Bão o não? É eu memo!</p>
